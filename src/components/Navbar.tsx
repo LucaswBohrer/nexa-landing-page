@@ -66,17 +66,30 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <a
-            href="#comece"
-            className="group hidden items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90 md:flex"
-          >
-            Começar
-            <ArrowUpRight
-              size={15}
-              className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-            />
-          </a>
+          {/* Desktop app access + CTA */}
+          <div className="hidden items-center gap-2 md:flex">
+            <a
+              href="/dashboard"
+              className="group flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-medium text-white/75 transition hover:border-white/20 hover:bg-white/[0.07] hover:text-white"
+            >
+              Abrir app
+              <ArrowUpRight
+                size={14}
+                className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              />
+            </a>
+
+            <a
+              href="#comece"
+              className="group flex items-center gap-1 rounded-full bg-white px-4 py-2 text-sm font-medium text-black transition hover:bg-white/90"
+            >
+              Começar
+              <ArrowUpRight
+                size={15}
+                className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+              />
+            </a>
+          </div>
 
           {/* Mobile menu button */}
           <button
@@ -174,18 +187,31 @@ export function Navbar() {
 
               <div className="my-2 h-px bg-white/[0.06]" />
 
-              <a
-                href="#comece"
-                onClick={closeMenu}
-                className="group flex items-center justify-center gap-2 rounded-2xl bg-white px-4 py-3.5 text-sm font-medium text-black transition hover:bg-white/90"
-              >
-                Começar gratuitamente
+              <div className="grid grid-cols-2 gap-2">
+                <a
+                  href="/dashboard"
+                  onClick={closeMenu}
+                  className="group flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] px-3 py-3.5 text-sm font-medium text-white/75 transition hover:border-white/20 hover:bg-white/[0.08] hover:text-white"
+                >
+                  Abrir app
+                  <ArrowUpRight
+                    size={14}
+                    className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </a>
 
-                <ArrowUpRight
-                  size={15}
-                  className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                />
-              </a>
+                <a
+                  href="#comece"
+                  onClick={closeMenu}
+                  className="group flex items-center justify-center gap-2 rounded-2xl bg-white px-3 py-3.5 text-sm font-medium text-black transition hover:bg-white/90"
+                >
+                  Começar
+                  <ArrowUpRight
+                    size={15}
+                    className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </a>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
