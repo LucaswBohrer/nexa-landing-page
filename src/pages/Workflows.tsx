@@ -18,13 +18,17 @@ const templates: WorkflowTemplate[] = [
 ];
 
 type Status = "pending" | "running" | "completed";
+type RunRecord = { id: number; workflow: string; completedAt: string; duration: string };
 
 function Workflows() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [selected, setSelected] = useState(0);
   const [statuses, setStatuses] = useState<Status[]>(templates[0].steps.map(() => "pending"));
   const [running, setRunning] = useState(false);
-  const [runs, setRuns] = useState(0);
+  const [runs, setRuns] = useState(() => Number(window.localStorage.getItem("nexa:workflow-runs") ?? 0));
+  const [history, setHistory] = useState<RunRecord[]>(() => {
+    try { return JSON.parse(window.localStorage.getItem("nexa:workflow-history") ?? "[]") as RunRecord[]; } catch { return []; }
+  });
   const workflow = templates[selected];
   const completed = statuses.filter((s) => s === "completed").length;
   const progress = Math.round((completed / workflow.steps.length) * 100);
@@ -38,7 +42,9 @@ function Workflows() {
     if (!running) return;
     if (completed >= workflow.steps.length) {
       setRunning(false);
-      setRuns((value) => value + 1);
+      setRuns((value) => { const next = value + 1; window.localStorage.setItem("nexa:workflow-runs", String(next)); return next; });
+      const record: RunRecord = { id: Date.now(), workflow: workflow.name, completedAt: new Date().toISOString(), duration: "5.6s" };
+      setHistory((current) => { const next = [record, ...current].slice(0, 8); window.localStorage.setItem("nexa:workflow-history", JSON.stringify(next)); return next; });
       return;
     }
     setStatuses((current) => current.map((status, index) => index === completed ? "running" : status));
@@ -125,6 +131,12 @@ function Workflows() {
               </section>
             </div>
           </div>
+          <section className="mx-auto mt-6 max-w-[1250px] px-5 pb-8 sm:px-8 lg:px-10">
+            <div className="rounded-2xl border border-white/7 bg-white/[0.025] p-6">
+              <div className="flex items-center justify-between"><div><p className="text-[10px] uppercase tracking-[0.18em] text-white/25">Execution history</p><h2 className="mt-2 text-lg font-medium">Recent runs.</h2></div><span className="text-xs text-white/25">{history.length} saved</span></div>
+              {history.length ? <div className="mt-5 divide-y divide-white/6">{history.slice(0,5).map((run)=><div key={run.id} className="flex items-center gap-4 py-4 first:pt-0 last:pb-0"><div className="grid h-9 w-9 shrink-0 place-items-center rounded-xl border border-emerald-400/15 bg-emerald-400/[0.06]"><Check className="h-4 w-4 text-emerald-300/80"/></div><div className="min-w-0 flex-1"><p className="truncate text-sm font-medium">{run.workflow}</p><p className="mt-1 text-xs text-white/30">{new Date(run.completedAt).toLocaleString("pt-BR")} · {run.duration}</p></div><span className="hidden text-[10px] uppercase tracking-[0.14em] text-emerald-300/60 sm:block">Success</span></div>)}</div> : <div className="mt-5 rounded-xl border border-dashed border-white/8 px-4 py-8 text-center"><p className="text-sm text-white/35">Nenhuma execução registrada ainda.</p><p className="mt-1 text-xs text-white/20">Execute um workflow para criar seu primeiro registro.</p></div>}
+            </div>
+          </section>
         </section>
       </div>
     </main>
