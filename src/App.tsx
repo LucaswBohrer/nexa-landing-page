@@ -11,8 +11,9 @@ import { Intelligence } from "./sections/Intelligence";
 import { Pricing } from "./sections/Pricing";
 import { FinalCTA } from "./sections/FinalCTA";
 import { Footer } from "./sections/Footer";
+import Dashboard from "./pages/Dashboard";
 
-function App() {
+function LandingPage() {
   return (
     <main className="min-h-screen bg-[#050505] text-white">
       <CursorTrail />
@@ -30,6 +31,14 @@ function App() {
       <Footer />
     </main>
   );
+}
+
+function App() {
+  if (window.location.pathname === "/dashboard") {
+    return <Dashboard />;
+  }
+
+  return <LandingPage />;
 }
 
 export default App;
