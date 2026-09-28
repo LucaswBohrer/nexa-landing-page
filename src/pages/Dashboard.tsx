@@ -200,7 +200,7 @@ function Dashboard() {
                 </div>
               </section>
 
-              <section className="relative overflow-hidden rounded-2xl border border-white/8 bg-white/[0.035] p-6">
+              <section className="group relative overflow-hidden rounded-2xl border border-white/8 bg-white/[0.035] p-6">
                 <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-white/[0.06] blur-3xl" />
                 <div className="relative">
                   <div className="flex items-center justify-between">
@@ -215,9 +215,9 @@ function Dashboard() {
                   <p className="mt-3 text-sm leading-6 text-white/40">
                     A NEXA identificou 4 oportunidades de otimização nos seus workflows ativos.
                   </p>
-                  <button type="button" className="mt-7 inline-flex items-center gap-2 text-xs font-medium text-white/65 hover:text-white">
-                    Ver recomendações <ChevronRight className="h-3.5 w-3.5" />
-                  </button>
+                  <a href="/dashboard/ai" className="mt-7 inline-flex items-center gap-2 text-xs font-medium text-white/65 transition-colors hover:text-white">
+                    Abrir NEXA AI <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                  </a>
                 </div>
               </section>
             </div>
