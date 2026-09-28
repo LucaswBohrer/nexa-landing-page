@@ -461,7 +461,7 @@ O projeto está estruturado para receber futuras evoluções, como:
 - [ ] Favicon personalizado
 - [x] Open Graph image
 - [x] Página interna do dashboard
-- [ ] Simulação funcional de workflows
+- [x] Simulação funcional de workflows
 - [ ] Integração com API de IA
 - [ ] Sistema de autenticação conceitual
 - [ ] Testes automatizados
