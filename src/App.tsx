@@ -17,6 +17,7 @@ import Analytics from "./pages/Analytics";
 import Activity from "./pages/Activity";
 import Settings from "./pages/Settings";
 import AI from "./pages/AI";
+import Login from "./pages/Login";
 
 function LandingPage() {
   return (
@@ -39,6 +40,16 @@ function LandingPage() {
 }
 
 function App() {
+  const path = window.location.pathname;
+  const dashboardRoute = path.startsWith("/dashboard");
+  const authenticated = window.localStorage.getItem("nexa:auth") === "demo";
+
+  if (path === "/login") return <Login />;
+  if (dashboardRoute && !authenticated) {
+    window.location.replace("/login");
+    return null;
+  }
+
   if (window.location.pathname === "/dashboard/analytics") {
     return <Analytics />;
   }
