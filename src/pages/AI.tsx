@@ -3,7 +3,7 @@ import { Activity, ArrowLeft, BarChart3, Bot, Check, ChevronRight, Clock3, Layou
 
 type RunRecord = { id: number; workflow: string; completedAt: string; duration: string };
 
-const recommendations = [
+const demoRecommendations = [
   {
     title: "Lead qualification pode ganhar uma etapa de priorização",
     detail: "A NEXA sugere separar leads de alta intenção antes da atualização do CRM.",
@@ -28,6 +28,9 @@ function AI() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [history, setHistory] = useState<RunRecord[]>([]);
   const [analyzing, setAnalyzing] = useState(false);
+  const [recommendations, setRecommendations] = useState(demoRecommendations);
+  const [summary, setSummary] = useState("Execute a análise para gerar recomendações com IA.");
+  const [error, setError] = useState("");
   const [analyzed, setAnalyzed] = useState(false);
 
   useEffect(() => {
@@ -44,13 +47,37 @@ function AI() {
     return Array.from(counts.entries()).sort((a, b) => b[1] - a[1]);
   }, [history]);
 
-  function runAnalysis() {
+  async function runAnalysis() {
     setAnalyzing(true);
     setAnalyzed(false);
-    window.setTimeout(() => {
-      setAnalyzing(false);
+    setError("");
+
+    try {
+      const response = await fetch("/api/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          history: history.slice(0, 20),
+          workflowCounts,
+        }),
+      });
+
+      const data = (await response.json()) as {
+        summary?: string;
+        recommendations?: typeof demoRecommendations;
+        error?: string;
+      };
+
+      if (!response.ok) throw new Error(data.error ?? "Não foi possível concluir a análise.");
+
+      setSummary(data.summary ?? "Análise concluída com base no histórico dos workflows.");
+      if (data.recommendations?.length) setRecommendations(data.recommendations);
       setAnalyzed(true);
-    }, 1200);
+    } catch (analysisError) {
+      setError(analysisError instanceof Error ? analysisError.message : "Erro ao analisar a operação.");
+    } finally {
+      setAnalyzing(false);
+    }
   }
 
   return (
@@ -108,8 +135,11 @@ function AI() {
                     <div><p className="text-sm font-medium">NEXA AI</p><p className="mt-1 text-xs text-white/30">Operations intelligence</p></div>
                   </div>
                   <h2 className="mt-7 max-w-xl text-2xl font-medium tracking-[-0.035em] sm:text-3xl">Sua operação já produz sinais. A IA transforma esses sinais em ação.</h2>
-                  <p className="mt-4 max-w-xl text-sm leading-6 text-white/40">Nesta versão demonstrativa, a análise usa o histórico local dos workflows. A arquitetura está preparada para receber um provedor de IA real sem expor chaves no navegador.</p>
-                  <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/8 bg-white/[0.03] px-3 py-2 text-[10px] uppercase tracking-[0.16em] text-white/35"><span className="h-1.5 w-1.5 rounded-full bg-white/70" />Demo mode · local data</div>
+                  <p className="mt-4 max-w-xl text-sm leading-6 text-white/40">{summary}</p>
+                  <div className="mt-6 flex flex-wrap items-center gap-2">
+                    <div className="inline-flex items-center gap-2 rounded-full border border-white/8 bg-white/[0.03] px-3 py-2 text-[10px] uppercase tracking-[0.16em] text-white/35"><span className="h-1.5 w-1.5 rounded-full bg-white/70" />Gemini API · server-side</div>
+                    {error && <span className="text-xs text-white/35">{error}</span>}
+                  </div>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
                   <div className="rounded-2xl border border-white/7 bg-black/20 p-5"><p className="text-xs text-white/35">Execuções analisadas</p><p className="mt-2 text-3xl font-semibold tracking-[-0.04em]">{history.length}</p></div>
