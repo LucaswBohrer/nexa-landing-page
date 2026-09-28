@@ -1,10 +1,11 @@
 import { Activity as ActivityIcon, BarChart3, Check, Clock3, Filter, LayoutDashboard, LogOut, Menu, Settings, Workflow, X, Zap, AlertCircle } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
-const demoItems = [
+const demoItems: ActivityItem[] = [
   ["Lead qualificado","CRM → Pipeline","2 min atrás","success"],["Relatório gerado","Analytics → PDF","8 min atrás","success"],["Email enviado","Marketing → Cliente","12 min atrás","success"],["Workflow iniciado","Lead qualification","18 min atrás","running"],["CRM atualizado","NEXA → HubSpot","24 min atrás","success"],["Follow-up aguardando","Marketing → Email","31 min atrás","waiting"],["Workflow falhou","Webhook → CRM","43 min atrás","failed"],["Dados sincronizados","ERP → Analytics","1 h atrás","success"],
 ] as const;
 type Status = "all" | "success" | "running" | "waiting" | "failed";
+type ActivityItem = readonly [string, string, string, string];
 type StoredRun = { id: number; workflow: string; completedAt: string; duration: string };
 
 function Activity() {
