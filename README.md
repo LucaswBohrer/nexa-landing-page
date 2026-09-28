@@ -457,7 +457,7 @@ O projeto está estruturado para receber futuras evoluções, como:
 - [x] Deploy público — Vercel
 - [x] Screenshots oficiais do projeto
 - [ ] Favicon personalizado
-- [ ] Open Graph image
+- [x] Open Graph image
 - [ ] Página interna do dashboard
 - [ ] Simulação funcional de workflows
 - [ ] Integração com API de IA
