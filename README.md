@@ -302,6 +302,8 @@ src/
 │   ├── SplitText.tsx
 │   └── SpotlightCard.tsx
 │
+├── pages/
+│   └── Dashboard.tsx
 ├── sections/
 │   ├── AutomationShowcase.tsx
 │   ├── Features.tsx
@@ -458,7 +460,7 @@ O projeto está estruturado para receber futuras evoluções, como:
 - [x] Screenshots oficiais do projeto
 - [ ] Favicon personalizado
 - [x] Open Graph image
-- [ ] Página interna do dashboard
+- [x] Página interna do dashboard
 - [ ] Simulação funcional de workflows
 - [ ] Integração com API de IA
 - [ ] Sistema de autenticação conceitual
