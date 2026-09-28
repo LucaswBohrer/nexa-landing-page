@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { LucideIcon } from "lucide-react";
 import {
   Activity,
   ArrowUpRight,
@@ -31,6 +32,15 @@ const workflows = [
   { name: "Lead qualification", status: "Ativo", runs: "2.481", time: "1,8s" },
   { name: "Relatório semanal", status: "Ativo", runs: "842", time: "4,2s" },
   { name: "Follow-up automático", status: "Ativo", runs: "1.294", time: "2,1s" },
+];
+
+type NavItem = { label: string; icon: LucideIcon; active?: boolean; href?: string };
+
+const navItems: NavItem[] = [
+  { label: "Overview", icon: LayoutDashboard, active: true, href: "/dashboard" },
+  { label: "Workflows", icon: Workflow, href: "/dashboard/workflows" },
+  { label: "Analytics", icon: BarChart3 },
+  { label: "Activity", icon: Activity },
 ];
 
 const activity = [
@@ -68,21 +78,20 @@ function Dashboard() {
             </div>
 
             <nav className="mt-10 space-y-1">
-              {[
-                ["Overview", LayoutDashboard, true],
-                ["Workflows", Workflow, false],
-                ["Analytics", BarChart3, false],
-                ["Activity", Activity, false],
-              ].map(([label, Icon, active]) => (
-                <button
-                  key={label as string}
-                  type="button"
-                  className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-colors ${active ? "bg-white/[0.08] text-white" : "text-white/45 hover:bg-white/[0.04] hover:text-white"}`}
-                >
-                  <Icon className="h-4 w-4" />
-                  {label as string}
-                </button>
-              ))}
+              {navItems.map(({ label, icon: Icon, active, href }) => {
+                const className = `flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-colors ${active ? "bg-white/[0.08] text-white" : "text-white/45 hover:bg-white/[0.04] hover:text-white"}`;
+                return href ? (
+                  <a key={label} href={href} className={className}>
+                    <Icon className="h-4 w-4" />
+                    {label}
+                  </a>
+                ) : (
+                  <button key={label} type="button" className={className}>
+                    <Icon className="h-4 w-4" />
+                    {label}
+                  </button>
+                );
+              })}
             </nav>
 
             <div className="mt-auto space-y-1">
