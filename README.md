@@ -2,15 +2,11 @@
 
 ### Sua operação. No piloto automático.
 
-**NEXA** é uma landing page SaaS fictícia criada para explorar **frontend moderno, design de produto, animações interativas e experiências digitais orientadas por IA**.
+**NEXA** é um SaaS fictício de automação inteligente criado como projeto de portfólio, com foco em **frontend moderno, design de produto, motion design e experiências digitais orientadas por IA**.
 
 > **“O trabalho repetitivo não deveria ser seu trabalho.”**
 
-A proposta da NEXA é representar uma plataforma de automação inteligente capaz de conectar ferramentas, interpretar processos e transformar tarefas repetitivas em workflows automatizados.
-
----
-
-## 🌐 Live Demo
+A proposta é representar uma plataforma capaz de conectar ferramentas, transformar processos em workflows e acompanhar uma operação através de um workspace interno.
 
 <p align="center">
   <a href="https://nexa-landing-page-fawn.vercel.app/">
@@ -18,194 +14,157 @@ A proposta da NEXA é representar uma plataforma de automação inteligente capa
   </a>
 </p>
 
-<p align="center">
-  <a href="https://nexa-landing-page-fawn.vercel.app/">https://nexa-landing-page-fawn.vercel.app/</a>
-</p>
+---
 
-> A NEXA está publicada e disponível online através da Vercel.
+## 🌐 Live Demo
+
+A aplicação está publicada na Vercel e inclui a landing page pública e um workspace interno demonstrativo.
+
+### Fluxo do produto
+
+`Landing → Login → Dashboard → Workflows / Analytics / Activity / Settings / NEXA AI`
+
+> **Demo:** a autenticação é local e conceitual. Nenhuma credencial é enviada para um servidor.
 
 ---
 
 ## 📸 Preview
 
-Uma seleção de capturas da experiência da NEXA em desktop e mobile.
-
 ### Desktop
 
-<p align="center">
-  <img src="./screenshots/desktop-hero.png" alt="NEXA — Hero desktop" width="900"/>
-</p>
-
-<p align="center">
-  <img src="./screenshots/desktop-dashboard.png" alt="NEXA — Product Showcase desktop" width="900"/>
-</p>
-
-<p align="center">
-  <img src="./screenshots/desktop-workflow.png" alt="NEXA — Workflow desktop" width="900"/>
-</p>
-
-<p align="center">
-  <img src="./screenshots/desktop-features.png" alt="NEXA — Features desktop" width="900"/>
-</p>
-
-<p align="center">
-  <img src="./screenshots/desktop-intelligence.png" alt="NEXA — Intelligence desktop" width="900"/>
-</p>
-
-<p align="center">
-  <img src="./screenshots/desktop-pricing.png" alt="NEXA — Pricing desktop" width="900"/>
-</p>
+<p align="center"><img src="./screenshots/desktop-hero.png" alt="NEXA — Hero desktop" width="900"/></p>
+<p align="center"><img src="./screenshots/desktop-dashboard.png" alt="NEXA — Product Showcase desktop" width="900"/></p>
+<p align="center"><img src="./screenshots/desktop-workflow.png" alt="NEXA — Workflow desktop" width="900"/></p>
+<p align="center"><img src="./screenshots/desktop-features.png" alt="NEXA — Features desktop" width="900"/></p>
+<p align="center"><img src="./screenshots/desktop-intelligence.png" alt="NEXA — Intelligence desktop" width="900"/></p>
+<p align="center"><img src="./screenshots/desktop-pricing.png" alt="NEXA — Pricing desktop" width="900"/></p>
 
 ### Mobile
 
-<p align="center">
-  <img src="./screenshots/mobile-hero.png" alt="NEXA — Hero mobile" width="320"/>
-</p>
-
-<p align="center">
-  <img src="./screenshots/mobile-intelligence.png" alt="NEXA — Intelligence mobile" width="320"/>
-</p>
-
-> As imagens ficam na pasta `screenshots/`. Mantenha exatamente estes nomes de arquivo para que o preview do README seja renderizado corretamente.
+<p align="center"><img src="./screenshots/mobile-hero.png" alt="NEXA — Hero mobile" width="320"/></p>
+<p align="center"><img src="./screenshots/mobile-intelligence.png" alt="NEXA — Intelligence mobile" width="320"/></p>
 
 ---
 
 ## ✨ O projeto
 
-A NEXA foi construída como um projeto de portfólio com foco em uma experiência visual premium, inspirada em produtos SaaS modernos.
-
-A interface combina:
+A NEXA foi construída como uma experiência SaaS premium, combinando:
 
 - Dark UI
 - Glassmorphism
 - Microinterações
+- Motion design
 - Animações baseadas em scroll
-- Parallax e efeitos de profundidade
+- Parallax
+- Tilt 3D
 - Elementos interativos
 - Componentização
 - Responsividade
 - Experiência mobile
-- Motion design orientado à hierarquia visual
+- Workspace interno
+- Simulação de automações
 
-A ideia é que o movimento tenha função: **guiar a atenção, reforçar feedback e criar percepção de profundidade**, sem transformar a interface em uma coleção de efeitos aleatórios.
-
----
-
-## 🧠 Conceito
-
-A ideia central da NEXA é simples:
-
-> Empresas não deveriam gastar tempo executando tarefas que podem ser automatizadas.
-
-O usuário define o processo.
-
-**A NEXA executa.**
-
-### Exemplo de workflow
-
-```text
-Novo lead
-    ↓
-NEXA AI
-    ↓
-Análise e qualificação
-    ↓
-CRM atualizado
-    ↓
-Follow-up automático
-```
+O movimento foi pensado para **guiar atenção, reforçar feedback e criar percepção de profundidade**, sem transformar a interface em uma coleção de efeitos aleatórios.
 
 ---
 
-## 🚀 Destaques da experiência
+## 🚀 Funcionalidades
 
-### 🤖 Inteligência artificial
+### Landing page
 
-A interface apresenta a NEXA como uma camada inteligente capaz de:
+- Hero com parallax reativo
+- Product Showcase
+- Workflows conceituais
+- Features interativas
+- Automation Showcase com scroll-driven animations
+- Intelligence section
+- Pricing
+- CTA final
+- Footer interativo
+- Navegação responsiva
 
-- Interpretar processos
-- Identificar oportunidades de automação
-- Qualificar informações
-- Gerar ações automaticamente
-- Otimizar workflows
+### Dashboard
 
-### ⚡ Workflows inteligentes
+O workspace interno possui:
 
-A landing page apresenta três cenários conceituais:
-
-**Sales**
-
-```text
-New Lead
-→ AI Qualification
-→ CRM Update
-→ Follow-up
-```
-
-**Marketing**
-
-```text
-Segmentation
-→ Content
-→ Distribution
-→ Analytics
-```
-
-**Operations**
-
-```text
-Data Collection
-→ Analysis
-→ Insight
-→ Action
-```
-
-### 📊 Dashboard conceitual
-
-O projeto inclui uma representação visual de uma plataforma SaaS com:
-
-- Processos automatizados
-- Métricas
-- Atividades recentes
+- Overview
 - Workflows
 - Analytics
-- Status da operação
+- Activity
+- Settings
 - NEXA AI
+- Métricas da operação
+- Histórico de execuções
+- Navegação responsiva
 
-Todos os dados exibidos são **fictícios** e utilizados exclusivamente para composição da interface.
+### Workflow Simulator
+
+A área de Workflows permite:
+
+- Escolher entre automações
+- Executar etapas sequencialmente
+- Visualizar progresso
+- Reiniciar execuções
+- Registrar execuções concluídas
+- Persistir histórico no `localStorage`
+- Exibir execuções recentes na Activity
+
+> A execução é uma **simulação local**. Não existem APIs externas conectadas aos workflows.
+
+### NEXA AI
+
+A página NEXA AI representa conceitualmente a camada de inteligência do produto.
+
+Atualmente funciona em **Demo Mode**, utilizando dados locais.
+
+A integração com uma API real de IA permanece como evolução futura.
+
+### Autenticação conceitual
+
+O projeto possui o fluxo:
+
+```text
+Landing
+   ↓
+Login
+   ↓
+Dashboard
+   ↓
+Logout
+```
+
+As rotas `/dashboard/*` são protegidas por uma sessão local armazenada no navegador.
+
+> Isso não é autenticação de produção. O objetivo é demonstrar arquitetura e experiência de acesso.
 
 ---
 
 ## ✨ Motion & Interações
 
-A experiência foi construída para responder ao usuário em diferentes níveis.
-
-Entre os efeitos implementados estão:
-
 - Hero com parallax reativo ao mouse
-- Spotlight global acompanhando o cursor
-- Cursor trail sutil
+- Spotlight global
+- Cursor trail
 - Spotlight individual nos cards
-- Tilt 3D nos cards
+- Tilt 3D
 - Microinterações em botões
-- Navbar com estado ativo por seção
+- Navbar com estado ativo
 - Métricas com count-up
-- Conexões animadas entre etapas de workflow
+- Conexões animadas entre workflows
 - AI Orb interativa
-- Backgrounds com aurora animada
+- Aurora background
 - Progress bar de scroll
-- Reveals cinematográficos por viewport
-- Automation Showcase com animações controladas por scroll
-- CTA final com entrada cinematográfica
-- Respeito a `prefers-reduced-motion`
+- Reveals cinematográficos
+- Automation Showcase controlado por scroll
+- CTA final cinematográfico
+- `prefers-reduced-motion`
 
 ---
 
 ## 📱 Responsividade
 
-A interface foi desenvolvida para diferentes tamanhos de tela e recebeu ajustes específicos para mobile.
+A interface recebeu ajustes específicos para desktop e mobile e foi testada em dispositivo móvel real.
 
-O projeto foi testado em **dispositivo móvel real**, incluindo:
+Incluindo:
 
 - Navbar mobile
 - Pricing cards
@@ -219,21 +178,64 @@ O projeto foi testado em **dispositivo móvel real**, incluindo:
 
 ---
 
-## 🧩 Estrutura da página
+## 🏗️ Arquitetura
 
 ```text
-Navbar
+src/
 │
-├── Hero
-├── Product Showcase
-├── Workflow
-├── Features
-├── Automation Showcase
-├── Intelligence
-├── Pricing
-├── Final CTA
-└── Footer
+├── components/
+│   ├── AIOrb.tsx
+│   ├── AuroraBackground.tsx
+│   ├── Button.tsx
+│   ├── CursorTrail.tsx
+│   ├── GlobalSpotlight.tsx
+│   ├── Navbar.tsx
+│   ├── ScrollProgress.tsx
+│   ├── SplitText.tsx
+│   └── SpotlightCard.tsx
+│
+├── pages/
+│   ├── Activity.tsx
+│   ├── AI.tsx
+│   ├── Analytics.tsx
+│   ├── Dashboard.tsx
+│   ├── Login.tsx
+│   ├── Settings.tsx
+│   └── Workflows.tsx
+│
+├── sections/
+│   ├── AutomationShowcase.tsx
+│   ├── Features.tsx
+│   ├── FinalCTA.tsx
+│   ├── Footer.tsx
+│   ├── Hero.tsx
+│   ├── Intelligence.tsx
+│   ├── Pricing.tsx
+│   ├── ProductShowcase.tsx
+│   └── Workflow.tsx
+│
+├── App.tsx
+├── index.css
+└── main.tsx
+
+tests/
+└── smoke.test.mjs
 ```
+
+---
+
+## 🛠️ Stack
+
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS v4**
+- **Motion**
+- **GSAP + ScrollTrigger**
+- **Lucide React**
+- **Node.js / npm**
+- **Git / GitHub**
+- **Vercel**
 
 ---
 
@@ -252,128 +254,9 @@ Navbar
 | Layout | Minimalista |
 | Destaques | Glow e profundidade |
 
-A direção visual busca transmitir uma tecnologia sofisticada sem sacrificar clareza e legibilidade.
-
----
-
-## 🛠️ Stack
-
-### Frontend
-
-- **React**
-- **TypeScript**
-- **Vite**
-- **Tailwind CSS v4**
-
-### Animações
-
-- **Motion**
-- **GSAP**
-- **ScrollTrigger**
-
-### Ícones
-
-- **Lucide React**
-
-### Desenvolvimento
-
-- **Node.js**
-- **npm**
-- **Git**
-- **GitHub**
-
----
-
-## 🏗️ Arquitetura
-
-O projeto utiliza uma estrutura baseada em componentes reutilizáveis e seções independentes:
-
-```text
-src/
-│
-├── components/
-│   ├── AIOrb.tsx
-│   ├── AuroraBackground.tsx
-│   ├── Button.tsx
-│   ├── CursorTrail.tsx
-│   ├── GlobalSpotlight.tsx
-│   ├── Navbar.tsx
-│   ├── ScrollProgress.tsx
-│   ├── SplitText.tsx
-│   └── SpotlightCard.tsx
-│
-├── pages/
-│   └── Dashboard.tsx
-├── sections/
-│   ├── AutomationShowcase.tsx
-│   ├── Features.tsx
-│   ├── FinalCTA.tsx
-│   ├── Footer.tsx
-│   ├── Hero.tsx
-│   ├── Intelligence.tsx
-│   ├── Pricing.tsx
-│   ├── ProductShowcase.tsx
-│   └── Workflow.tsx
-│
-├── App.tsx
-├── index.css
-└── main.tsx
-```
-
-Essa organização permite evoluir cada seção de forma independente e manter a interface modular.
-
----
-
-## 🧱 Componentes de destaque
-
-### `AIOrb`
-
-Elemento visual utilizado para representar a inteligência da NEXA.
-
-Inclui:
-
-- Anéis orbitais
-- Glow
-- Nós flutuantes
-- Ícone central
-- Movimento contínuo
-- Interação com o cursor
-- Layout responsivo
-
-### `SpotlightCard`
-
-Cards que respondem ao movimento do mouse através de:
-
-- Spotlight localizado
-- Tilt 3D
-- Spring animations
-- Efeito de profundidade
-
-### `GlobalSpotlight`
-
-Cria uma iluminação sutil que acompanha o cursor globalmente.
-
-### `CursorTrail`
-
-Adiciona um rastro de cursor discreto para reforçar a sensação de responsividade da interface.
-
-### `ScrollProgress`
-
-Exibe uma barra de progresso no topo da página durante a navegação.
-
-### `SplitText`
-
-Permite criar animações de entrada palavra por palavra em títulos de destaque.
-
-### `AuroraBackground`
-
-Background animado utilizado para criar profundidade visual nas áreas de maior destaque.
-
 ---
 
 ## 💰 Pricing
-
-A interface apresenta três planos conceituais:
 
 | Plano | Preço |
 | --- | ---: |
@@ -381,50 +264,67 @@ A interface apresenta três planos conceituais:
 | Growth | R$ 149/mês |
 | Scale | R$ 399/mês |
 
-> Os preços, funcionalidades e métricas apresentados são fictícios e fazem parte exclusivamente do conceito visual da landing page.
+> Preços, funcionalidades e métricas são fictícios e existem exclusivamente para o conceito visual do projeto.
+
+---
+
+## 🧪 Testes e qualidade
+
+O projeto possui:
+
+- Smoke tests automatizados
+- Build de produção com TypeScript + Vite
+- Validação de rotas
+- Testes de responsividade
+- Testes em dispositivo móvel real
+- Verificação de overflow
+- Validação de microinterações
+- `prefers-reduced-motion`
+
+### Comandos
+
+```bash
+npm run build
+npm test
+npm run lint
+```
 
 ---
 
 ## 💻 Como executar localmente
 
-### Pré-requisitos
-
-- Node.js
-- npm
-- Git
-
-### Clone o projeto
+### Clone
 
 ```bash
 git clone https://github.com/LucaswBohrer/nexa-landing-page.git
 cd nexa-landing-page
 ```
 
-### Instale as dependências
+### Instale
 
 ```bash
 npm install
 ```
 
-### Execute em desenvolvimento
+### Desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-A aplicação ficará disponível em:
-
-```text
-http://localhost:5173
-```
-
-### Build de produção
+### Build
 
 ```bash
 npm run build
 ```
 
-### Preview do build
+### Testes
+
+```bash
+npm test
+```
+
+### Preview
 
 ```bash
 npm run preview
@@ -432,45 +332,35 @@ npm run preview
 
 ---
 
-## 🔍 Qualidade e validação
+## 🗺️ Roadmap
 
-Durante o desenvolvimento foram realizados testes de:
-
-- Build de produção
-- Navegação entre seções
-- Responsividade
-- Hover e microinterações
-- Animações de entrada
-- Scroll-driven animations
-- Navegação mobile
-- Layout em dispositivo móvel real
-- Overflow horizontal
-- Pricing cards
-- CTA final
-- Elementos gráficos responsivos
-- `prefers-reduced-motion`
-
----
-
-## 🗺️ Próximos passos
-
-O projeto está estruturado para receber futuras evoluções, como:
+### Concluído
 
 - [x] Deploy público — Vercel
-- [x] Screenshots oficiais do projeto
+- [x] Screenshots oficiais
 - [x] Favicon personalizado
 - [x] Open Graph image
 - [x] Página interna do dashboard
 - [x] Simulação funcional de workflows
-- [ ] Integração com API de IA
 - [x] Sistema de autenticação conceitual
 - [x] Testes automatizados
+
+### Futuro
+
+- [ ] Integração com API de IA
+- [ ] Autenticação real com backend
+- [ ] Persistência em banco de dados
+- [ ] Integrações reais com ferramentas externas
+- [ ] Testes E2E
+- [ ] Observabilidade e analytics reais
+
+> A integração real de IA foi deixada propositalmente para uma etapa futura. Atualmente, a NEXA AI permanece em modo demonstrativo.
 
 ---
 
 ## 🎯 Objetivo
 
-O NEXA foi desenvolvido como um projeto de **portfólio**, demonstrando conhecimentos em:
+A NEXA foi desenvolvida como um projeto de **portfólio**, demonstrando conhecimentos em:
 
 - Desenvolvimento frontend
 - React
@@ -483,7 +373,8 @@ O NEXA foi desenvolvido como um projeto de **portfólio**, demonstrando conhecim
 - Componentização
 - Responsividade
 - Git e GitHub
-- Desenvolvimento orientado à experiência do usuário
+- Arquitetura de aplicações frontend
+- Experiência do usuário
 
 Mais do que uma landing page, o projeto explora como **design, movimento e tecnologia podem trabalhar juntos para comunicar um produto digital**.
 
