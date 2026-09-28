@@ -143,13 +143,7 @@ function Dashboard() {
                   Sua operação está funcionando normalmente. Veja o que a NEXA automatizou enquanto você cuidava do negócio.
                 </p>
               </div>
-              <button
-                type="button"
-                className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-black transition-transform hover:scale-[1.02] active:scale-[0.98]"
-              >
-                <Play className="h-3.5 w-3.5 fill-current" />
-                Executar workflow
-              </button>
+              <a href="/dashboard/workflows" className="inline-flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-medium text-black transition-transform hover:scale-[1.02] active:scale-[0.98]"><Play className="h-3.5 w-3.5 fill-current" />Executar workflow</a>
             </div>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
