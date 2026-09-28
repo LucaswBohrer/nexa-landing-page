@@ -7,6 +7,7 @@ import {
   Workflow,
 } from "lucide-react";
 
+import { motion } from "motion/react";
 import { SpotlightCard } from "../components/SpotlightCard";
 
 const features = [
@@ -62,7 +63,7 @@ export function Features() {
     >
       <div className="mx-auto max-w-6xl">
         {/* Header */}
-        <div className="mb-16">
+        <motion.div initial={{ opacity: 0, y: 24, filter: "blur(8px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8 }} className="mb-16">
           <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-white/30">
             Everything connected
           </p>
@@ -89,7 +90,8 @@ export function Features() {
             const Icon = feature.icon;
 
             return (
-              <SpotlightCard
+              <motion.div initial={{ opacity: 0, y: 32, filter: "blur(6px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.65, delay: features.indexOf(feature) * 0.07 }}>
+                <SpotlightCard
                 key={feature.title}
                 className={
                   feature.size === "large"
@@ -118,10 +120,11 @@ export function Features() {
                     </p>
                   </div>
                 </div>
-              </SpotlightCard>
+                </SpotlightCard>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
