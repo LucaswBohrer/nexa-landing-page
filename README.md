@@ -394,7 +394,7 @@ Durante o desenvolvimento foram realizados testes de:
 
 O projeto está estruturado para receber futuras evoluções, como:
 
-- [ ] Deploy público
+- [x] Deploy público — Vercel
 - [ ] Screenshots oficiais do projeto
 - [ ] Favicon personalizado
 - [ ] Open Graph image
