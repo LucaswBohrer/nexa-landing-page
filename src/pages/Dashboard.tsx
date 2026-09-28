@@ -41,6 +41,7 @@ const navItems: NavItem[] = [
   { label: "Workflows", icon: Workflow, href: "/dashboard/workflows" },
   { label: "Analytics", icon: BarChart3, href: "/dashboard/analytics" },
   { label: "Activity", icon: Activity, href: "/dashboard/activity" },
+  { label: "NEXA AI", icon: Bot, href: "/dashboard/ai" },
 ];
 
 const activity = [
