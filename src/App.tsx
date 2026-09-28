@@ -16,6 +16,7 @@ import Workflows from "./pages/Workflows";
 import Analytics from "./pages/Analytics";
 import Activity from "./pages/Activity";
 import Settings from "./pages/Settings";
+import AI from "./pages/AI";
 
 function LandingPage() {
   return (
@@ -44,6 +45,10 @@ function App() {
 
   if (window.location.pathname === "/dashboard/activity") {
     return <Activity />;
+  }
+
+  if (window.location.pathname === "/dashboard/ai") {
+    return <AI />;
   }
 
   if (window.location.pathname === "/dashboard/settings") {
