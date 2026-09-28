@@ -98,11 +98,7 @@ export function Features() {
                 transition={{ duration: 0.65, delay: features.indexOf(feature) * 0.07 }}
               >
                 <SpotlightCard
-                className={
-                  feature.size === "large"
-                    ? "min-h-[300px]"
-                    : "min-h-[250px]"
-                }
+                className="h-full min-h-[300px]"
               >
                 <div className="flex h-full flex-col p-7">
                   <div className="flex items-center justify-between">
