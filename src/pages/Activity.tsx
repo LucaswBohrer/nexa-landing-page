@@ -1,14 +1,16 @@
 import { Activity as ActivityIcon, BarChart3, Check, Clock3, Filter, LayoutDashboard, LogOut, Menu, Settings, Workflow, X, Zap, AlertCircle } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
-const items = [
+const demoItems = [
   ["Lead qualificado","CRM → Pipeline","2 min atrás","success"],["Relatório gerado","Analytics → PDF","8 min atrás","success"],["Email enviado","Marketing → Cliente","12 min atrás","success"],["Workflow iniciado","Lead qualification","18 min atrás","running"],["CRM atualizado","NEXA → HubSpot","24 min atrás","success"],["Follow-up aguardando","Marketing → Email","31 min atrás","waiting"],["Workflow falhou","Webhook → CRM","43 min atrás","failed"],["Dados sincronizados","ERP → Analytics","1 h atrás","success"],
 ] as const;
 type Status = "all" | "success" | "running" | "waiting" | "failed";
+type StoredRun = { id: number; workflow: string; completedAt: string; duration: string };
 
 function Activity() {
- const [sidebarOpen,setSidebarOpen]=useState(false); const [filter,setFilter]=useState<Status>("all");
- const filtered=useMemo(()=>filter==="all"?items:items.filter(x=>x[3]===filter),[filter]);
+ const [sidebarOpen,setSidebarOpen]=useState(false); const [filter,setFilter]=useState<Status>("all"); const [items,setItems]=useState(demoItems);
+ useEffect(() => { try { const stored=JSON.parse(window.localStorage.getItem("nexa:workflow-history") ?? "[]") as StoredRun[]; const runs=stored.map(run=>[run.workflow+" completed","NEXA → Workflow engine",new Date(run.completedAt).toLocaleString("pt-BR"),"success"] as const); setItems([...runs,...demoItems]); } catch {} }, []);
+ const filtered=useMemo(()=>filter==="all"?items:items.filter(x=>x[3]===filter),[filter,items]);
  const nav=[["Overview",LayoutDashboard,"/dashboard"],["Workflows",Workflow,"/dashboard/workflows"],["Analytics",BarChart3,"/dashboard/analytics"],["Activity",ActivityIcon,"/dashboard/activity"]] as const;
  return <main className="min-h-screen bg-[#050505] text-white"><div className="flex min-h-screen">
  <aside className={`fixed inset-y-0 left-0 z-50 w-64 border-r border-white/7 bg-[#080808] p-5 transition-transform duration-300 lg:static lg:translate-x-0 ${sidebarOpen?"translate-x-0":"-translate-x-full"}`}><div className="flex h-full flex-col"><div className="flex items-center justify-between"><a href="/" className="flex items-center gap-3"><span className="grid h-9 w-9 place-items-center rounded-xl border border-white/10 bg-white/[0.06] text-sm font-semibold">N</span><span className="text-sm font-semibold">NEXA</span></a><button onClick={()=>setSidebarOpen(false)} className="p-2 text-white/45 lg:hidden"><X className="h-4 w-4"/></button></div><nav className="mt-10 space-y-1">{nav.map(([label,Icon,href])=><a key={label} href={href} className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm ${label==="Activity"?"bg-white/[0.08]":"text-white/45 hover:bg-white/[0.04] hover:text-white"}`}><Icon className="h-4 w-4"/>{label}</a>)}</nav><div className="mt-auto space-y-1"><a href="/dashboard/settings" className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/45 hover:bg-white/[0.04] hover:text-white"><Settings className="h-4 w-4"/>Settings</a><a href="/" className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/45 hover:bg-white/[0.04] hover:text-white"><LogOut className="h-4 w-4"/>Voltar para o site</a></div></div></aside>
