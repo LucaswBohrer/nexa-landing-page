@@ -82,7 +82,7 @@ export function Features() {
               consomem tempo todos os dias.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Grid */}
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -90,9 +90,14 @@ export function Features() {
             const Icon = feature.icon;
 
             return (
-              <motion.div initial={{ opacity: 0, y: 32, filter: "blur(6px)" }} whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.65, delay: features.indexOf(feature) * 0.07 }}>
-                <SpotlightCard
+              <motion.div
                 key={feature.title}
+                initial={{ opacity: 0, y: 32, filter: "blur(6px)" }}
+                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.65, delay: features.indexOf(feature) * 0.07 }}
+              >
+                <SpotlightCard
                 className={
                   feature.size === "large"
                     ? "min-h-[300px]"
@@ -124,7 +129,7 @@ export function Features() {
               </motion.div>
             );
           })}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
