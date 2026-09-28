@@ -10,6 +10,22 @@ A proposta da NEXA é representar uma plataforma de automação inteligente capa
 
 ---
 
+## 🌐 Live Demo
+
+<p align="center">
+  <a href="https://nexa-landing-page-fawn.vercel.app/">
+    <strong>🚀 ACESSAR A NEXA →</strong>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://nexa-landing-page-fawn.vercel.app/">https://nexa-landing-page-fawn.vercel.app/</a>
+</p>
+
+> A NEXA está publicada e disponível online através da Vercel.
+
+---
+
 ## ✨ O projeto
 
 A NEXA foi construída como um projeto de portfólio com foco em uma experiência visual premium, inspirada em produtos SaaS modernos.
