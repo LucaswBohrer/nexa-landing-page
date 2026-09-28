@@ -71,7 +71,10 @@ function AI() {
       if (!response.ok) throw new Error(data.error ?? "Não foi possível concluir a análise.");
 
       setSummary(data.summary ?? "Análise concluída com base no histórico dos workflows.");
-      if (data.recommendations?.length) setRecommendations(data.recommendations);
+      if (data.recommendations?.length) {
+        const icons = [Zap, Clock3, Sparkles, Workflow];
+        setRecommendations(data.recommendations.map((item, index) => ({ ...item, icon: icons[index % icons.length] })));
+      }
       setAnalyzed(true);
     } catch (analysisError) {
       setError(analysisError instanceof Error ? analysisError.message : "Erro ao analisar a operação.");
