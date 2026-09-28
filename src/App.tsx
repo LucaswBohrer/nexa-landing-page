@@ -12,6 +12,7 @@ import { Pricing } from "./sections/Pricing";
 import { FinalCTA } from "./sections/FinalCTA";
 import { Footer } from "./sections/Footer";
 import Dashboard from "./pages/Dashboard";
+import Workflows from "./pages/Workflows";
 
 function LandingPage() {
   return (
@@ -34,6 +35,10 @@ function LandingPage() {
 }
 
 function App() {
+  if (window.location.pathname === "/dashboard/workflows") {
+    return <Workflows />;
+  }
+
   if (window.location.pathname === "/dashboard") {
     return <Dashboard />;
   }
