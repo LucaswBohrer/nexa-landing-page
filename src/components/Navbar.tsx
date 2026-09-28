@@ -4,7 +4,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const links = [
   { label: "Produto", href: "#produto" },
@@ -14,6 +14,18 @@ const links = [
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const sections = links.map((link) => document.querySelector(link.href)).filter((section): section is Element => Boolean(section));
+    if (!sections.length) return;
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) setActiveSection("#" + visible.target.id);
+    }, { rootMargin: "-25% 0px -55% 0px", threshold: [0, 0.15, 0.35, 0.6] });
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   function closeMenu() {
     setMenuOpen(false);
@@ -37,10 +49,19 @@ export function Navbar() {
             {links.map((link) => (
               <a
                 key={link.href}
-                className="transition hover:text-white"
+                className="relative py-1 transition hover:text-white"
                 href={link.href}
               >
                 {link.label}
+                <motion.span
+                  initial={false}
+                  animate={{
+                    scaleX: activeSection === link.href ? 1 : 0,
+                    opacity: activeSection === link.href ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="absolute inset-x-0 -bottom-0.5 h-px origin-center bg-white"
+                />
               </a>
             ))}
           </div>
