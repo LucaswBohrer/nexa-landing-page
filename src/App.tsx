@@ -13,6 +13,9 @@ import { FinalCTA } from "./sections/FinalCTA";
 import { Footer } from "./sections/Footer";
 import Dashboard from "./pages/Dashboard";
 import Workflows from "./pages/Workflows";
+import Analytics from "./pages/Analytics";
+import Activity from "./pages/Activity";
+import Settings from "./pages/Settings";
 
 function LandingPage() {
   return (
@@ -35,6 +38,18 @@ function LandingPage() {
 }
 
 function App() {
+  if (window.location.pathname === "/dashboard/analytics") {
+    return <Analytics />;
+  }
+
+  if (window.location.pathname === "/dashboard/activity") {
+    return <Activity />;
+  }
+
+  if (window.location.pathname === "/dashboard/settings") {
+    return <Settings />;
+  }
+
   if (window.location.pathname === "/dashboard/workflows") {
     return <Workflows />;
   }
