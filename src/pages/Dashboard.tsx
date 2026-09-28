@@ -100,10 +100,10 @@ function Dashboard() {
                 <Settings className="h-4 w-4" />
                 Settings
               </a>
-              <a href="/" className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/45 hover:bg-white/[0.04] hover:text-white">
+              <button type="button" onClick={() => { window.localStorage.removeItem("nexa:auth"); window.location.href = "/"; }} className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/45 hover:bg-white/[0.04] hover:text-white">
                 <LogOut className="h-4 w-4" />
-                Voltar para o site
-              </a>
+                Sair
+              </button>
             </div>
           </div>
         </aside>
