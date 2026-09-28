@@ -22,14 +22,16 @@ export function Button({
   };
 
   return (
-    <button whileTap={{ scale: 0.97 }}
+    <motion.button whileTap={{ scale: 0.97 }}
       className={`${base} ${variants[variant]}`}>
-      {children}
+      <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+      <span className="relative z-10">{children}</span>
 
       <ArrowRight
         size={16}
         className="relative z-10 transition-transform duration-300 group-hover:translate-x-1"
       />
-    </button>
+    </motion.button>
   );
 }
