@@ -26,6 +26,50 @@ A proposta da NEXA é representar uma plataforma de automação inteligente capa
 
 ---
 
+## 📸 Preview
+
+Uma seleção de capturas da experiência da NEXA em desktop e mobile.
+
+### Desktop
+
+<p align="center">
+  <img src="./screenshots/desktop-hero.png" alt="NEXA — Hero desktop" width="900"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/desktop-dashboard.png" alt="NEXA — Product Showcase desktop" width="900"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/desktop-workflow.png" alt="NEXA — Workflow desktop" width="900"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/desktop-features.png" alt="NEXA — Features desktop" width="900"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/desktop-intelligence.png" alt="NEXA — Intelligence desktop" width="900"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/desktop-pricing.png" alt="NEXA — Pricing desktop" width="900"/>
+</p>
+
+### Mobile
+
+<p align="center">
+  <img src="./screenshots/mobile-hero.png" alt="NEXA — Hero mobile" width="320"/>
+</p>
+
+<p align="center">
+  <img src="./screenshots/mobile-intelligence.png" alt="NEXA — Intelligence mobile" width="320"/>
+</p>
+
+> As imagens ficam na pasta `screenshots/`. Mantenha exatamente estes nomes de arquivo para que o preview do README seja renderizado corretamente.
+
+---
+
 ## ✨ O projeto
 
 A NEXA foi construída como um projeto de portfólio com foco em uma experiência visual premium, inspirada em produtos SaaS modernos.
