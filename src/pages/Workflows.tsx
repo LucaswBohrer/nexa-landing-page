@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react";
+import type { LucideIcon } from "lucide-react";
 import { Activity, ArrowLeft, BarChart3, Check, ChevronRight, Circle, Clock3, LayoutDashboard, LogOut, Menu, Play, RotateCcw, Settings, Sparkles, Workflow, X, Zap } from "lucide-react";
 
-const templates = [
+type WorkflowStep = [label: string, detail: string, icon: LucideIcon];
+type WorkflowTemplate = { name: string; description: string; steps: WorkflowStep[] };
+
+const templates: WorkflowTemplate[] = [
   { name: "Lead qualification", description: "Qualifica novos leads e atualiza o CRM automaticamente.", steps: [
     ["Novo lead recebido", "Webhook → NEXA", Zap], ["IA analisa o lead", "NEXA AI → Scoring", Sparkles], ["CRM atualizado", "NEXA → HubSpot", Workflow], ["Follow-up preparado", "NEXA → Email", Activity],
   ]},
