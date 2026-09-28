@@ -35,7 +35,7 @@ export function FinalCTA() {
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <div className="grid items-center gap-10 lg:grid-cols-2">
-          <div>
+          <motion.div initial={{ opacity: 0, x: -28, filter: "blur(8px)" }} whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8 }}>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs text-white/50">
               <Sparkles size={13} />
               Inteligência em movimento
@@ -68,11 +68,11 @@ export function FinalCTA() {
                 14 dias grátis · Sem cartão
               </span>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="relative flex justify-center lg:justify-end">
+          <motion.div initial={{ opacity: 0, x: 28, scale: 0.96 }} whileInView={{ opacity: 1, x: 0, scale: 1 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.9, delay: 0.15 }} className="relative flex justify-center lg:justify-end">
             <AIOrb />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
