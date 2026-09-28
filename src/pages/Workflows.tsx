@@ -70,11 +70,11 @@ function Workflows() {
             <nav className="mt-10 space-y-1">
               <a href="/dashboard" className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/45 hover:bg-white/[0.04] hover:text-white"><LayoutDashboard className="h-4 w-4" />Overview</a>
               <a href="/dashboard/workflows" className="flex items-center gap-3 rounded-xl bg-white/[0.08] px-3 py-2.5 text-sm"><Workflow className="h-4 w-4" />Workflows</a>
-              <button type="button" className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm text-white/45"><BarChart3 className="h-4 w-4" />Analytics</button>
-              <button type="button" className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm text-white/45"><Activity className="h-4 w-4" />Activity</button>
+              <a href="/dashboard/analytics" className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm text-white/45 hover:bg-white/[0.04] hover:text-white"><BarChart3 className="h-4 w-4" />Analytics</a>
+              <a href="/dashboard/activity" className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm text-white/45 hover:bg-white/[0.04] hover:text-white"><Activity className="h-4 w-4" />Activity</a>
             </nav>
             <div className="mt-auto space-y-1">
-              <button type="button" className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/45"><Settings className="h-4 w-4" />Settings</button>
+              <a href="/dashboard/settings" className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/45 hover:bg-white/[0.04] hover:text-white"><Settings className="h-4 w-4" />Settings</a>
               <a href="/" className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/45"><LogOut className="h-4 w-4" />Voltar para o site</a>
             </div>
           </div>
