@@ -1,4 +1,5 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
+import type { FormEvent } from "react";
 
 function Login() {
   const [email, setEmail] = useState("demo@nexa.ai");
