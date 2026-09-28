@@ -2,66 +2,46 @@
 
 ### Sua operação. No piloto automático.
 
-Uma landing page SaaS fictícia criada para explorar **design de produto, desenvolvimento frontend moderno, animações interativas e experiências digitais orientadas por IA**.
+**NEXA** é uma landing page SaaS fictícia criada para explorar **frontend moderno, design de produto, animações interativas e experiências digitais orientadas por IA**.
 
 > **“O trabalho repetitivo não deveria ser seu trabalho.”**
 
-A NEXA representa uma plataforma de automação inteligente capaz de conectar ferramentas, interpretar processos e transformar tarefas repetitivas em workflows automatizados.
+A proposta da NEXA é representar uma plataforma de automação inteligente capaz de conectar ferramentas, interpretar processos e transformar tarefas repetitivas em workflows automatizados.
 
 ---
 
-## ✨ Preview
+## ✨ O projeto
 
-<!-- Substitua pelos screenshots reais do projeto após adicioná-los ao repositório. -->
+A NEXA foi construída como um projeto de portfólio com foco em uma experiência visual premium, inspirada em produtos SaaS modernos.
 
-<p align="center">
-  <img src="./screenshots/desktop.png" alt="NEXA — Desktop Preview" width="900"/>
-</p>
+A interface combina:
 
-<p align="center">
-  <img src="./screenshots/mobile.png" alt="NEXA — Mobile Preview" width="300"/>
-</p>
+- Dark UI
+- Glassmorphism
+- Microinterações
+- Animações baseadas em scroll
+- Parallax e efeitos de profundidade
+- Elementos interativos
+- Componentização
+- Responsividade
+- Experiência mobile
+- Motion design orientado à hierarquia visual
 
-### 🌐 Live Demo
-
-> Em breve.
-
-<!-- Quando o projeto estiver publicado:
-[**Acessar NEXA →**](https://SEU-LINK.vercel.app)
--->
-
----
-
-## 🧠 Sobre o projeto
-
-A **NEXA** é uma landing page conceitual para uma plataforma SaaS de automação inteligente.
-
-O projeto foi desenvolvido com foco em criar uma experiência visual semelhante às interfaces de produtos SaaS modernos, combinando:
-
-* Design minimalista e premium
-* Dark UI
-* Glassmorphism
-* Microinterações
-* Animações baseadas em scroll
-* Elementos interativos
-* Componentes reutilizáveis
-* Responsividade
-* Experiência mobile
-* Comunicação visual baseada em inteligência artificial
-
-A proposta visual é transmitir a sensação de uma tecnologia sofisticada, mas simples de utilizar.
+A ideia é que o movimento tenha função: **guiar a atenção, reforçar feedback e criar percepção de profundidade**, sem transformar a interface em uma coleção de efeitos aleatórios.
 
 ---
 
-## 🎯 Conceito
+## 🧠 Conceito
 
 A ideia central da NEXA é simples:
 
-> Empresas não deveriam precisar gastar tempo executando tarefas que podem ser automatizadas.
+> Empresas não deveriam gastar tempo executando tarefas que podem ser automatizadas.
 
-A plataforma fictícia permite imaginar uma operação onde processos são transformados em workflows inteligentes.
+O usuário define o processo.
 
-### Exemplo
+**A NEXA executa.**
+
+### Exemplo de workflow
 
 ```text
 Novo lead
@@ -75,29 +55,23 @@ CRM atualizado
 Follow-up automático
 ```
 
-O usuário define o processo.
-
-A NEXA executa.
-
 ---
 
-## 🚀 Principais características
+## 🚀 Destaques da experiência
 
 ### 🤖 Inteligência artificial
 
 A interface apresenta a NEXA como uma camada inteligente capaz de:
 
-* Interpretar processos
-* Identificar oportunidades de automação
-* Qualificar informações
-* Gerar ações automaticamente
-* Otimizar workflows
-
----
+- Interpretar processos
+- Identificar oportunidades de automação
+- Qualificar informações
+- Gerar ações automaticamente
+- Otimizar workflows
 
 ### ⚡ Workflows inteligentes
 
-A landing page apresenta diferentes exemplos de automação:
+A landing page apresenta três cenários conceituais:
 
 **Sales**
 
@@ -126,81 +100,78 @@ Data Collection
 → Action
 ```
 
----
-
 ### 📊 Dashboard conceitual
 
-O projeto possui uma representação visual de uma plataforma SaaS contendo:
+O projeto inclui uma representação visual de uma plataforma SaaS com:
 
-* Processos automatizados
-* Métricas
-* Atividades recentes
-* Workflows
-* Analytics
-* Status da operação
-* NEXA AI
+- Processos automatizados
+- Métricas
+- Atividades recentes
+- Workflows
+- Analytics
+- Status da operação
+- NEXA AI
 
-Os dados apresentados são **fictícios**, utilizados exclusivamente para composição da interface.
-
----
-
-### ✨ Microinterações
-
-A experiência utiliza diversas interações para tornar a navegação mais dinâmica:
-
-* Spotlight global seguindo o cursor
-* Spotlight individual nos cards
-* Magnetic buttons
-* Hover states
-* Animações de entrada
-* Elementos flutuantes
-* Transições suaves
-* Efeitos de profundidade
-* Animações baseadas em scroll
-* Backgrounds animados
+Todos os dados exibidos são **fictícios** e utilizados exclusivamente para composição da interface.
 
 ---
 
-### 📱 Responsividade
+## ✨ Motion & Interações
 
-A interface foi desenvolvida para funcionar em diferentes tamanhos de tela.
+A experiência foi construída para responder ao usuário em diferentes níveis.
 
-O projeto foi testado tanto em desktop quanto em **dispositivo móvel real**, com ajustes específicos para:
+Entre os efeitos implementados estão:
 
-* Navegação mobile
-* Cards de pricing
-* Tipografia
-* CTA final
-* AI Orb
-* Espaçamentos
-* Elementos gráficos
-* Overflow horizontal
+- Hero com parallax reativo ao mouse
+- Spotlight global acompanhando o cursor
+- Cursor trail sutil
+- Spotlight individual nos cards
+- Tilt 3D nos cards
+- Microinterações em botões
+- Navbar com estado ativo por seção
+- Métricas com count-up
+- Conexões animadas entre etapas de workflow
+- AI Orb interativa
+- Backgrounds com aurora animada
+- Progress bar de scroll
+- Reveals cinematográficos por viewport
+- Automation Showcase com animações controladas por scroll
+- CTA final com entrada cinematográfica
+- Respeito a `prefers-reduced-motion`
+
+---
+
+## 📱 Responsividade
+
+A interface foi desenvolvida para diferentes tamanhos de tela e recebeu ajustes específicos para mobile.
+
+O projeto foi testado em **dispositivo móvel real**, incluindo:
+
+- Navbar mobile
+- Pricing cards
+- Tipografia responsiva
+- CTA final
+- AI Orb
+- Espaçamentos
+- Elementos gráficos
+- Overflow horizontal
+- Interações adaptadas para touch
 
 ---
 
 ## 🧩 Estrutura da página
 
-A landing page é composta pelas seguintes seções:
-
 ```text
 Navbar
 │
 ├── Hero
-│
 ├── Product Showcase
-│
 ├── Workflow
-│
 ├── Features
-│
 ├── Automation Showcase
-│
 ├── Intelligence
-│
 ├── Pricing
-│
 ├── Final CTA
-│
 └── Footer
 ```
 
@@ -208,22 +179,20 @@ Navbar
 
 ## 🎨 Design System
 
-A interface segue uma linguagem visual baseada em:
+| Elemento | Direção |
+| --- | --- |
+| Background | Preto / grafite |
+| Tipografia | Sans-serif moderna |
+| Contraste | Branco / tons de cinza |
+| Cards | Glassmorphism |
+| Bordas | Baixo contraste |
+| Sombras | Suaves |
+| Animações | Sutis e fluidas |
+| Espaçamento | Generoso |
+| Layout | Minimalista |
+| Destaques | Glow e profundidade |
 
-| Elemento    | Direção                |
-| ----------- | ---------------------- |
-| Background  | Preto / grafite        |
-| Tipografia  | Sans-serif moderna     |
-| Contraste   | Branco / tons de cinza |
-| Cards       | Glassmorphism          |
-| Bordas      | Baixo contraste        |
-| Sombras     | Suaves                 |
-| Animações   | Sutis e fluidas        |
-| Espaçamento | Generoso               |
-| Layout      | Minimalista            |
-| Destaques   | Glow e profundidade    |
-
-O objetivo não é adicionar animações apenas por estética, mas utilizar movimento para reforçar **hierarquia, feedback e percepção de profundidade**.
+A direção visual busca transmitir uma tecnologia sofisticada sem sacrificar clareza e legibilidade.
 
 ---
 
@@ -231,46 +200,45 @@ O objetivo não é adicionar animações apenas por estética, mas utilizar movi
 
 ### Frontend
 
-* **React**
-* **TypeScript**
-* **Vite**
-* **Tailwind CSS**
+- **React**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS v4**
 
 ### Animações
 
-* **Motion**
-* **GSAP**
-* **ScrollTrigger**
+- **Motion**
+- **GSAP**
+- **ScrollTrigger**
 
 ### Ícones
 
-* **Lucide React**
+- **Lucide React**
 
 ### Desenvolvimento
 
-* **Node.js**
-* **npm**
-* **Git**
-* **GitHub**
+- **Node.js**
+- **npm**
+- **Git**
+- **GitHub**
 
 ---
 
 ## 🏗️ Arquitetura
 
-O projeto utiliza uma organização baseada em componentes e seções:
+O projeto utiliza uma estrutura baseada em componentes reutilizáveis e seções independentes:
 
 ```text
 src/
-│
-├── assets/
 │
 ├── components/
 │   ├── AIOrb.tsx
 │   ├── AuroraBackground.tsx
 │   ├── Button.tsx
+│   ├── CursorTrail.tsx
 │   ├── GlobalSpotlight.tsx
-│   ├── MagneticButton.tsx
 │   ├── Navbar.tsx
+│   ├── ScrollProgress.tsx
 │   ├── SplitText.tsx
 │   └── SpotlightCard.tsx
 │
@@ -290,7 +258,7 @@ src/
 └── main.tsx
 ```
 
-Essa separação permite manter a interface modular e facilita a evolução individual de cada seção.
+Essa organização permite evoluir cada seção de forma independente e manter a interface modular.
 
 ---
 
@@ -298,60 +266,58 @@ Essa separação permite manter a interface modular e facilita a evolução indi
 
 ### `AIOrb`
 
-Elemento visual utilizado na seção final para representar a inteligência da NEXA.
+Elemento visual utilizado para representar a inteligência da NEXA.
 
 Inclui:
 
-* Anéis orbitais
-* Glow
-* Nós flutuantes
-* Ícone central
-* Movimento contínuo
-* Layout responsivo
-
----
-
-### `GlobalSpotlight`
-
-Cria um efeito de iluminação sutil que acompanha o cursor.
-
-O objetivo é adicionar profundidade à interface sem interferir na leitura do conteúdo.
-
----
-
-### `MagneticButton`
-
-Botões que respondem à posição do cursor, criando um pequeno efeito magnético.
-
----
+- Anéis orbitais
+- Glow
+- Nós flutuantes
+- Ícone central
+- Movimento contínuo
+- Interação com o cursor
+- Layout responsivo
 
 ### `SpotlightCard`
 
-Cards que respondem ao movimento do mouse através de um spotlight localizado.
+Cards que respondem ao movimento do mouse através de:
 
----
+- Spotlight localizado
+- Tilt 3D
+- Spring animations
+- Efeito de profundidade
+
+### `GlobalSpotlight`
+
+Cria uma iluminação sutil que acompanha o cursor globalmente.
+
+### `CursorTrail`
+
+Adiciona um rastro de cursor discreto para reforçar a sensação de responsividade da interface.
+
+### `ScrollProgress`
+
+Exibe uma barra de progresso no topo da página durante a navegação.
 
 ### `SplitText`
 
-Componente utilizado para criar animações de entrada palavra por palavra.
-
----
+Permite criar animações de entrada palavra por palavra em títulos de destaque.
 
 ### `AuroraBackground`
 
-Background animado utilizado para criar uma atmosfera visual associada à inteligência artificial.
+Background animado utilizado para criar profundidade visual nas áreas de maior destaque.
 
 ---
 
-## 📈 Pricing
+## 💰 Pricing
 
 A interface apresenta três planos conceituais:
 
-| Plano   |      Preço |
-| ------- | ---------: |
-| Starter |  R$ 49/mês |
-| Growth  | R$ 149/mês |
-| Scale   | R$ 399/mês |
+| Plano | Preço |
+| --- | ---: |
+| Starter | R$ 49/mês |
+| Growth | R$ 149/mês |
+| Scale | R$ 399/mês |
 
 > Os preços, funcionalidades e métricas apresentados são fictícios e fazem parte exclusivamente do conceito visual da landing page.
 
@@ -361,53 +327,42 @@ A interface apresenta três planos conceituais:
 
 ### Pré-requisitos
 
-Certifique-se de possuir:
+- Node.js
+- npm
+- Git
 
-* Node.js
-* npm
-* Git
-
-### Clone o repositório
+### Clone o projeto
 
 ```bash
 git clone https://github.com/LucaswBohrer/nexa-landing-page.git
-```
-
-Entre na pasta:
-
-```bash
 cd nexa-landing-page
 ```
 
-Instale as dependências:
+### Instale as dependências
 
 ```bash
 npm install
 ```
 
-Execute o ambiente de desenvolvimento:
+### Execute em desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-A aplicação estará disponível em:
+A aplicação ficará disponível em:
 
 ```text
 http://localhost:5173
 ```
 
----
-
-## 📦 Build de produção
-
-Para gerar a versão otimizada:
+### Build de produção
 
 ```bash
 npm run build
 ```
 
-Para visualizar o build localmente:
+### Preview do build
 
 ```bash
 npm run preview
@@ -419,57 +374,56 @@ npm run preview
 
 Durante o desenvolvimento foram realizados testes de:
 
-* Build de produção
-* Navegação entre seções
-* Responsividade
-* Interações de hover
-* Animações
-* Navegação mobile
-* Layout em dispositivo móvel real
-* Overflow horizontal
-* Componentes de pricing
-* CTA final
-* Elementos gráficos responsivos
+- Build de produção
+- Navegação entre seções
+- Responsividade
+- Hover e microinterações
+- Animações de entrada
+- Scroll-driven animations
+- Navegação mobile
+- Layout em dispositivo móvel real
+- Overflow horizontal
+- Pricing cards
+- CTA final
+- Elementos gráficos responsivos
+- `prefers-reduced-motion`
 
 ---
 
-## 🗺️ Roadmap
+## 🗺️ Próximos passos
 
-O projeto pode evoluir futuramente com:
+O projeto está estruturado para receber futuras evoluções, como:
 
-* [ ] Deploy público
-* [ ] Screenshots oficiais
-* [ ] Favicon personalizado
-* [ ] Open Graph image
-* [ ] Menu mobile avançado
-* [ ] Mais microinterações
-* [ ] Página interna do dashboard
-* [ ] Página de documentação
-* [ ] Simulação real de workflows
-* [ ] Integração com uma API de IA
-* [ ] Sistema de autenticação conceitual
-* [ ] Dark/light theme
-* [ ] Testes automatizados
+- [ ] Deploy público
+- [ ] Screenshots oficiais do projeto
+- [ ] Favicon personalizado
+- [ ] Open Graph image
+- [ ] Página interna do dashboard
+- [ ] Simulação funcional de workflows
+- [ ] Integração com API de IA
+- [ ] Sistema de autenticação conceitual
+- [ ] Testes automatizados
 
 ---
 
-## 📚 Objetivo do projeto
+## 🎯 Objetivo
 
-O NEXA foi desenvolvido como um projeto de **portfólio**, com o objetivo de demonstrar conhecimentos em:
+O NEXA foi desenvolvido como um projeto de **portfólio**, demonstrando conhecimentos em:
 
-* Desenvolvimento frontend
-* React
-* TypeScript
-* Tailwind CSS
-* Animações web
-* UX/UI
-* Design de interfaces SaaS
-* Componentização
-* Responsividade
-* Git e GitHub
-* Desenvolvimento orientado à experiência do usuário
+- Desenvolvimento frontend
+- React
+- TypeScript
+- Tailwind CSS
+- Motion design
+- GSAP
+- UX/UI
+- Design de interfaces SaaS
+- Componentização
+- Responsividade
+- Git e GitHub
+- Desenvolvimento orientado à experiência do usuário
 
-Mais do que uma simples landing page, o projeto busca explorar como **design, movimento e tecnologia podem trabalhar juntos para comunicar um produto digital**.
+Mais do que uma landing page, o projeto explora como **design, movimento e tecnologia podem trabalhar juntos para comunicar um produto digital**.
 
 ---
 
@@ -479,17 +433,17 @@ Mais do que uma simples landing page, o projeto busca explorar como **design, mo
 
 Estudante de Engenharia Elétrica e desenvolvedor interessado em:
 
-* Software
-* Inteligência Artificial
-* Automação
-* Desenvolvimento Web
-* Sistemas embarcados
-* Experiências digitais
+- Software
+- Inteligência Artificial
+- Automação
+- Desenvolvimento Web
+- Sistemas embarcados
+- Experiências digitais
 
 ### Links
 
-* GitHub: [@LucaswBohrer](https://github.com/LucaswBohrer)
-* Projeto: [NEXA](https://github.com/LucaswBohrer/nexa-landing-page)
+- GitHub: [@LucaswBohrer](https://github.com/LucaswBohrer)
+- Projeto: [NEXA](https://github.com/LucaswBohrer/nexa-landing-page)
 
 ---
 
