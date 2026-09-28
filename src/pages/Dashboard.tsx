@@ -39,8 +39,8 @@ type NavItem = { label: string; icon: LucideIcon; active?: boolean; href?: strin
 const navItems: NavItem[] = [
   { label: "Overview", icon: LayoutDashboard, active: true, href: "/dashboard" },
   { label: "Workflows", icon: Workflow, href: "/dashboard/workflows" },
-  { label: "Analytics", icon: BarChart3 },
-  { label: "Activity", icon: Activity },
+  { label: "Analytics", icon: BarChart3, href: "/dashboard/analytics" },
+  { label: "Activity", icon: Activity, href: "/dashboard/activity" },
 ];
 
 const activity = [
@@ -95,10 +95,10 @@ function Dashboard() {
             </nav>
 
             <div className="mt-auto space-y-1">
-              <button type="button" className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/45 hover:bg-white/[0.04] hover:text-white">
+              <a href="/dashboard/settings" className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/45 hover:bg-white/[0.04] hover:text-white">
                 <Settings className="h-4 w-4" />
                 Settings
-              </button>
+              </a>
               <a href="/" className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-white/45 hover:bg-white/[0.04] hover:text-white">
                 <LogOut className="h-4 w-4" />
                 Voltar para o site
